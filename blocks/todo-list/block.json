@@ -1,0 +1,49 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "pluginette/todo-block-list",
+	"version": "1.0",
+	"title": "Checklist (Todo List)",
+	"keywords": [
+		"todo",
+		"checkbox",
+		"list"
+	],
+	"category": "text",
+	"description": "A group of checkboxes",
+	"supports": {
+		"html": false,
+		"typography": {
+			"fontSize": true
+		},
+		"color": true
+	},
+	"attributes": {
+		"content": {
+			"type": "string",
+			"selector": "div",
+			"source": "html"
+		},
+		"type": {
+			"type": "string"
+		},
+		"checked": {
+			"type": "boolean",
+			"default": false
+		},
+		"enableSave": {
+			"type": "boolean",
+			"default": null
+		},
+		"fieldName": {
+			"type": "string"
+		}
+	},
+	"providesContext": {
+		"pluginette/todo-block-list/enableSave": "enableSave"
+	},
+	"textdomain": "pluginette-todo-list",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
